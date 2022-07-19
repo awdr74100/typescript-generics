@@ -1,0 +1,23 @@
+{
+  "name": "typescript-generics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awdr74100/typescript-generics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awdr74100/typescript-generics/issues"
+  },
+  "homepage": "https://github.com/awdr74100/typescript-generics#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
