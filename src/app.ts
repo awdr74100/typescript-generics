@@ -67,11 +67,9 @@ class DataStorage<T extends string | number | boolean> {
   }
 }
 
-const namesStorage = new DataStorage();
+const namesStorage = new DataStorage<string>();
 namesStorage.addItem('Leo');
 namesStorage.addItem('Ian');
 namesStorage.removeItem('Leo');
 namesStorage.updateItem('Ian', 'Owen');
 console.log(namesStorage.getItems());
-
-
