@@ -73,3 +73,28 @@ namesStorage.addItem('Ian');
 namesStorage.removeItem('Leo');
 namesStorage.updateItem('Ian', 'Owen');
 console.log(namesStorage.getItems());
+
+interface Todo {
+  title: string;
+  description: string;
+}
+
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
+  return { ...todo, ...fieldsToUpdate };
+}
+
+const todoList: Readonly<Todo[]> = [{ title: '...', description: '...' }];
+// todoList.push({ title: '...', description: '...' });
+// todoList.pop();
+// todoList.forEach(({ title }) => console.log(title));
+// todoList[1] = { title: '...', description: '...' };
+
+const todo: Readonly<Todo> = { title: '...', description: '...' };
+// todo.title = 'dw';
+
+type UserName = 'Ian' | 'Owen';
+
+const todoStorage: Record<UserName, Todo[]> = {
+  Ian: [{ title: '...', description: '...' }],
+  Owen: [{ title: '...', description: '...' }],
+};
