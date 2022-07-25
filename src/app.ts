@@ -98,3 +98,28 @@ const todoStorage: Record<UserName, Todo[]> = {
   Ian: [{ title: '...', description: '...' }],
   Owen: [{ title: '...', description: '...' }],
 };
+
+class GenericsDataStorage<T extends string | number | boolean> {
+  private data: T[] = [];
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+}
+
+class UnionsDataStorage {
+  private data: string[] | number[] | boolean[] = [];
+  // private data: (string | number | boolean)[] = [];
+
+  addItem(item: string | number | boolean) {
+    this.data.push(...[]);
+  }
+}
+
+const genericsStorage = new GenericsDataStorage<string>();
+genericsStorage.addItem('A');
+// genericsStorage.addItem(10);
+
+const unionsStorage = new UnionsDataStorage();
+unionsStorage.addItem('A');
+unionsStorage.addItem(10);
